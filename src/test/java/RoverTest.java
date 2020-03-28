@@ -37,4 +37,11 @@ public class RoverTest {
         Rover rover = new Rover(Coordinate.ORIGIN, direction);
         Assert.assertEquals(direction, rover.getDirection());
     }
+
+    @Test
+    public void roverInitializationTest_WEST() {
+        Direction direction = Direction.WEST;
+        Rover rover = new Rover(Coordinate.ORIGIN, direction);
+        Assert.assertEquals(direction, rover.getDirection());
+    }
 }
