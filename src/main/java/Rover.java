@@ -17,6 +17,8 @@ public class Rover {
     }
 
     public void forward() {
-        this.coordinate = new Coordinate(0, -1);
+        int newX = this.coordinate.getX();
+        int newY = this.coordinate.getY() - 1;
+        this.coordinate = new Coordinate(newX, newY);
     }
 }

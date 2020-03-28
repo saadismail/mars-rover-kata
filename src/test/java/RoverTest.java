@@ -47,10 +47,19 @@ public class RoverTest {
 
 
     @Test
-    public void roverInitializationTest_FORWARD() {
+    public void roverInitializationTest_FORWARD_FROM_ORIGIN() {
         Rover rover = new Rover(Coordinate.ORIGIN, Direction.NORTH);
         rover.forward();
         Coordinate expected = new Coordinate(0, -1);
+        Assert.assertEquals(expected, rover.getCoordinate());
+    }
+
+    @Test
+    public void roverInitializationTest_FORWARD() {
+        Coordinate initialCoordinate = new Coordinate(123, 456);
+        Rover rover = new Rover(initialCoordinate, Direction.NORTH);
+        rover.forward();
+        Coordinate expected = new Coordinate(123, 455);
         Assert.assertEquals(expected, rover.getCoordinate());
     }
 }
