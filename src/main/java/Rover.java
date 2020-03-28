@@ -17,23 +17,20 @@ public class Rover {
     }
 
     public void forward() {
-        int newX, newY;
+        int deltaX = 0, deltaY = 0;
         if (direction == Direction.NORTH) {
-            newX = this.coordinate.getX();
-            newY = this.coordinate.getY() + 1;
+            deltaY = 1;
         } else if (direction == Direction.SOUTH) {
-            newX = this.coordinate.getX();
-            newY = this.coordinate.getY() - 1;
+            deltaY = -1;
         } else if (direction == Direction.WEST) {
-            newX = this.coordinate.getX() - 1;
-            newY = this.coordinate.getY();
+           deltaX = -1;
         } else if (direction == Direction.EAST) {
-            newX = this.coordinate.getX() + 1;
-            newY = this.coordinate.getY();
+            deltaX = 1;
         } else {
             throw new RuntimeException("Direction is Null");
         }
-
+        int newX = this.coordinate.getX() + deltaX;
+        int newY = this.coordinate.getY() + deltaY;
         this.coordinate = new Coordinate(newX, newY);
     }
 }
