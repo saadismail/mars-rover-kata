@@ -1,6 +1,20 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Rover {
+
+    // TODO: refactor to vector
     private Coordinate coordinate;
     private Direction direction;
+
+    private Map<Direction, Coordinate> directionCoordinateMap = new HashMap<Direction, Coordinate>() {
+        {
+            put(Direction.NORTH, new Coordinate(0, 1));
+            put(Direction.SOUTH, new Coordinate(0, -1));
+            put(Direction.EAST, new Coordinate(1, 0));
+            put(Direction.WEST, new Coordinate(-1, 0));
+        }
+    };
 
     public Rover(Coordinate coordinate, Direction direction) {
         this.coordinate = coordinate;
@@ -17,20 +31,9 @@ public class Rover {
     }
 
     public void forward() {
-        int deltaX = 0, deltaY = 0;
-        if (direction == Direction.NORTH) {
-            deltaY = 1;
-        } else if (direction == Direction.SOUTH) {
-            deltaY = -1;
-        } else if (direction == Direction.WEST) {
-           deltaX = -1;
-        } else if (direction == Direction.EAST) {
-            deltaX = 1;
-        } else {
-            throw new RuntimeException("Direction is Null");
-        }
-        int newX = this.coordinate.getX() + deltaX;
-        int newY = this.coordinate.getY() + deltaY;
+        Coordinate delta = directionCoordinateMap.get(this.direction);
+        int newX = this.coordinate.getX() + delta.getX();
+        int newY = this.coordinate.getY() + delta.getY();
         this.coordinate = new Coordinate(newX, newY);
     }
 }
