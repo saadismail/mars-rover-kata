@@ -1,16 +1,11 @@
 public class Rover {
-    private int xPosition, yPosition;
+    private Coordinate coordinate;
 
-    public Rover(int initialRoverX, int initialRoverY) {
-        this.xPosition = initialRoverX;
-        this.yPosition = initialRoverY;
+    public Rover(Coordinate coordinate) {
+        this.coordinate = coordinate;
     }
 
-    public int getX() {
-        return xPosition;
-    }
-
-    public int getY() {
-        return yPosition;
+    public Coordinate getCoordinate() {
+        return this.coordinate;
     }
 }

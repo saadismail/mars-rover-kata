@@ -5,20 +5,16 @@ public class RoverTest {
 
     @Test
     public void roverInitializationTest_ORIGIN() {
-        int initialRoverX = 0;
-        int initialRoverY = 0;
-        Rover rover = new Rover(initialRoverX, initialRoverY);
-        Assert.assertEquals(initialRoverX, rover.getX());
-        Assert.assertEquals(initialRoverY, rover.getY());
+        Coordinate initialCoordinate = new Coordinate(0, 0);
+        Rover rover = new Rover(initialCoordinate);
+        Assert.assertEquals(initialCoordinate, rover.getCoordinate());
     }
 
     @Test
     public void roverInitializationTest_NONORIGIN() {
-        int initialRoverX = 123;
-        int initialRoverY = 456;
-        Rover rover = new Rover(initialRoverX, initialRoverY);
-        Assert.assertEquals(initialRoverX, rover.getX());
-        Assert.assertEquals(initialRoverY, rover.getY());
+        Coordinate initialCoordinate = new Coordinate(123, 456);
+        Rover rover = new Rover(initialCoordinate);
+        Assert.assertEquals(initialCoordinate, rover.getCoordinate());
     }
 
 }
