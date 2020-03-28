@@ -17,13 +17,20 @@ public class Rover {
     }
 
     public void forward() {
-        int newX;
-        int newY;
+        int newX, newY;
         newX = this.coordinate.getX();
-        newY = this.coordinate.getY() - 1;
+        newY = this.coordinate.getY() + 1;
         if (direction == Direction.SOUTH){
             newX = this.coordinate.getX();
-            newY = this.coordinate.getY() + 1;
+            newY = this.coordinate.getY() - 1;
+        }
+        else if (direction == Direction.WEST) {
+            newX = this.coordinate.getX() - 1;
+            newY = this.coordinate.getY();
+        }
+        else if (direction == Direction.EAST) {
+            newX = this.coordinate.getX() + 1;
+            newY = this.coordinate.getY();
         }
 
         this.coordinate = new Coordinate(newX, newY);

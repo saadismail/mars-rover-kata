@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="306c3974-dd45-4aae-b21b-7fdf3fe8ef33" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="306c3974-dd45-4aae-b21b-7fdf3fe8ef33" name="Default" comment="Test for forward to SOUTH">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Coordinate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RoverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RoverTest.java" afterDir="false" />
     </list>
@@ -203,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585406071378</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Test for forward to SOUTH">
+      <created>1585407187148</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585407187148</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -215,6 +218,7 @@
     <MESSAGE value="Added WEST direction" />
     <MESSAGE value="Added Rover.forward method" />
     <MESSAGE value="Implemented forward functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented forward functionality" />
+    <MESSAGE value="Test for forward to SOUTH" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test for forward to SOUTH" />
   </component>
 </project>
