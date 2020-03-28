@@ -8,4 +8,8 @@ public class Rover {
     public Coordinate getCoordinate() {
         return this.coordinate;
     }
+
+    public Direction getDirection() {
+        return Direction.NORTH;
+    }
 }

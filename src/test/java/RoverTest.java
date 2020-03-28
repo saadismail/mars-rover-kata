@@ -9,6 +9,7 @@ public class RoverTest {
         Coordinate initialCoordinate = Coordinate.ORIGIN;
         Rover rover = new Rover(initialCoordinate, direction);
         Assert.assertEquals(initialCoordinate, rover.getCoordinate());
+        Assert.assertEquals(direction, rover.getDirection());
     }
 
     @Test
