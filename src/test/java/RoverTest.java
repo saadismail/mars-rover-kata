@@ -5,6 +5,7 @@ public class RoverTest {
 
     @Test
     public void roverInitializationTest_ORIGIN() {
+        Direction direction = Direction.NORTH;
         Coordinate initialCoordinate = Coordinate.ORIGIN;
         Rover rover = new Rover(initialCoordinate);
         Assert.assertEquals(initialCoordinate, rover.getCoordinate());
