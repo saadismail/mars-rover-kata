@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 public class RoverTest {
@@ -7,8 +8,8 @@ public class RoverTest {
         int initialRoverX = 0;
         int initialRoverY = 0;
         Rover rover = new Rover(initialRoverX, initialRoverY);
-        assert(rover.getX() == initialRoverX);
-        assert(rover.getY() == initialRoverY);
+        Assert.assertEquals(initialRoverX, rover.getX());
+        Assert.assertEquals(initialRoverY, rover.getY());
     }
 
     @Test
@@ -16,8 +17,8 @@ public class RoverTest {
         int initialRoverX = 123;
         int initialRoverY = 456;
         Rover rover = new Rover(initialRoverX, initialRoverY);
-        assert(rover.getX() == initialRoverX);
-        assert(rover.getY() == initialRoverY);
+        Assert.assertEquals(initialRoverX, rover.getX());
+        Assert.assertEquals(initialRoverY, rover.getY());
     }
 
 }
