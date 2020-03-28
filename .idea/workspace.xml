@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="306c3974-dd45-4aae-b21b-7fdf3fe8ef33" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Direction.java" afterPath="$PROJECT_DIR$/src/main/java/Direction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Rover.java" afterPath="$PROJECT_DIR$/src/main/java/Rover.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/RoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/RoverTest.java" />
     </list>
@@ -27,8 +28,8 @@
       <file leaf-file-name="RoverTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/RoverTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+            <state relative-caret-position="333">
+              <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,13 +40,11 @@
       <file leaf-file-name="Rover.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Rover.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="247">
+              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
-                <element signature="e#118#119#0" expanded="true" />
-                <element signature="e#162#163#0" expanded="true" />
-                <element signature="e#280#281#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Direction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -301,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585405170509</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added getDirection test">
+      <created>1585405247257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585405247257</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -312,6 +318,18 @@
       <configuration name="All in mars-rover" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_mars-rover - 2020.03.28 at 19h 20m 30s.xml">
+      <configuration name="All in mars-rover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_mars-rover - 2020.03.28 at 19h 21m 23s.xml">
+      <configuration name="All in mars-rover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_mars-rover - 2020.03.28 at 19h 21m 28s.xml">
+      <configuration name="All in mars-rover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_mars-rover - 2020.03.28 at 19h 22m 02s.xml">
+      <configuration name="All in mars-rover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_mars-rover - 2020.03.28 at 19h 22m 09s.xml">
       <configuration name="All in mars-rover" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -352,7 +370,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Direction.NORTH" />
     <MESSAGE value="Passed Direction in Rover constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Passed Direction in Rover constructor" />
+    <MESSAGE value="Added getDirection test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getDirection test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -370,28 +389,26 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Rover.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="247">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <element signature="e#118#119#0" expanded="true" />
-            <element signature="e#162#163#0" expanded="true" />
-            <element signature="e#280#281#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/RoverTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        <state relative-caret-position="333">
+          <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -14,10 +14,11 @@ public class RoverTest {
 
     @Test
     public void roverInitializationTest_NONORIGIN() {
-        Direction direction = Direction.NORTH;
+        Direction direction = Direction.SOUTH;
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, direction);
         Assert.assertEquals(initialCoordinate, rover.getCoordinate());
+        Assert.assertEquals(direction, rover.getDirection());
     }
 
 }

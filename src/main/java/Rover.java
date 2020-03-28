@@ -1,8 +1,11 @@
 public class Rover {
     private Coordinate coordinate;
+    private Direction direction;
 
     public Rover(Coordinate coordinate, Direction direction) {
         this.coordinate = coordinate;
+        this.direction = direction;
+
     }
 
     public Coordinate getCoordinate() {
@@ -10,6 +13,6 @@ public class Rover {
     }
 
     public Direction getDirection() {
-        return Direction.NORTH;
+        return direction;
     }
 }
