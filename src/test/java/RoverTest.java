@@ -8,6 +8,7 @@ public class RoverTest {
         int initialRoverY = 0;
         Rover rover = new Rover(initialRoverX, initialRoverY);
         assert(rover.getX() == initialRoverX);
+        assert(rover.getY() == initialRoverY);
     }
 
 }
