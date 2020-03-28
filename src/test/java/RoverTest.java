@@ -5,7 +5,7 @@ public class RoverTest {
 
     @Test
     public void roverInitializationTest_ORIGIN() {
-        Coordinate initialCoordinate = new Coordinate(0, 0);
+        Coordinate initialCoordinate = Coordinate.ORIGIN;
         Rover rover = new Rover(initialCoordinate);
         Assert.assertEquals(initialCoordinate, rover.getCoordinate());
     }

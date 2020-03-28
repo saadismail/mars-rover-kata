@@ -1,5 +1,6 @@
 public class Coordinate {
     private int x, y;
+    public final static Coordinate ORIGIN = new Coordinate(0, 0);
 
     public Coordinate(int x, int y) {
         this.x = x;
