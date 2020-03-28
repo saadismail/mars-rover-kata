@@ -15,4 +15,7 @@ public class Rover {
     public Direction getDirection() {
         return direction;
     }
+
+    public void forward() {
+    }
 }
