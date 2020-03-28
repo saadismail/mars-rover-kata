@@ -62,4 +62,13 @@ public class RoverTest {
         Coordinate expected = new Coordinate(123, 455);
         Assert.assertEquals(expected, rover.getCoordinate());
     }
+
+    @Test
+    public void roverInitalizationTest_FORWARD_TO_SOUTH(){
+        Coordinate initialCoordinate = new Coordinate(123, 456);
+        Rover rover = new Rover(initialCoordinate, Direction.SOUTH);
+        rover.forward();
+        Coordinate expected = new Coordinate(123, 457);
+        Assert.assertEquals(expected, rover.getCoordinate());
+    }
 }
