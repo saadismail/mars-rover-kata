@@ -64,7 +64,7 @@ public class RoverTest {
     }
 
     @Test
-    public void roverInitalizationTest_FORWARD_TO_SOUTH(){
+    public void roverInitalizationTest_FORWARD_TO_SOUTH() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.SOUTH);
         rover.forward();
@@ -73,7 +73,7 @@ public class RoverTest {
     }
 
     @Test
-    public void roverInitalizationTest_FORWARD_TO_WEST(){
+    public void roverInitalizationTest_FORWARD_TO_WEST() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.WEST);
         rover.forward();
@@ -82,7 +82,7 @@ public class RoverTest {
     }
 
     @Test
-    public void roverInitalizationTest_FORWARD_TO_EAST(){
+    public void roverInitalizationTest_FORWARD_TO_EAST() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.EAST);
         rover.forward();
