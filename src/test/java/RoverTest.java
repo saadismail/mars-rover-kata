@@ -50,5 +50,7 @@ public class RoverTest {
     public void roverInitializationTest_FORWARD() {
         Rover rover = new Rover(Coordinate.ORIGIN, Direction.NORTH);
         rover.forward();
+        Coordinate expected = new Coordinate(0, -1);
+        Assert.assertEquals(expected, rover.getCoordinate());
     }
 }

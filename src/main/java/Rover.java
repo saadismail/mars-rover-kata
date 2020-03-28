@@ -17,5 +17,6 @@ public class Rover {
     }
 
     public void forward() {
+        this.coordinate = new Coordinate(0, -1);
     }
 }
