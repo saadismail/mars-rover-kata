@@ -37,19 +37,10 @@ public class Rover {
         return direction;
     }
 
-    public void move(Move move) {
+    public void move(Step step) {
         Coordinate delta = directionCoordinateMap.get(this.direction);
-        int newX = this.coordinate.getX() + (delta.getX() * move.coefficient);
-        int newY = this.coordinate.getY() + (delta.getY() * move.coefficient);
+        int newX = this.coordinate.getX() + (delta.getX() * step.coefficient);
+        int newY = this.coordinate.getY() + (delta.getY() * step.coefficient);
         this.coordinate = new Coordinate(newX, newY);
-    }
-
-    public void forward() {
-        move(Move.FORWARD);
-    }
-
-
-    public void backward() {
-        move(Move.BACKWARD);
     }
 }

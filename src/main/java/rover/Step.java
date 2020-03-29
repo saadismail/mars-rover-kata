@@ -1,11 +1,11 @@
 package rover;
 
-public enum Move {
+public enum Step {
 
     FORWARD(1), BACKWARD(-1);
     int coefficient;
 
-    Move(int coefficient) {
+    Step(int coefficient) {
         this.coefficient = coefficient;
     }
 }

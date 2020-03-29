@@ -26,10 +26,7 @@ public class Coordinate {
 
     @Override
     public String toString() {
-        return "rover.Coordinate{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return String.format("(%d, %d)", x, y);
     }
 
     @Override
