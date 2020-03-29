@@ -17,21 +17,9 @@ public enum Direction {
         }
     }
 
-    static Direction getNewRightDirection(Direction direction) {
+    public static Direction getNewDirection(Direction direction, int indexDelta) {
         int originalIndex = TURN_DIRECTIONS.indexOf(direction);
-        int newIndex = originalIndex + 1;
-        if (newIndex >= TURN_DIRECTIONS.size()) {
-            newIndex = 0;
-        }
-        return TURN_DIRECTIONS.get(newIndex);
-    }
-
-    static Direction getNewLeftDirection(Direction direction) {
-        int originalIndex = TURN_DIRECTIONS.indexOf(direction);
-        int newIndex = originalIndex - 1;
-        if (newIndex < 0) {
-            newIndex = TURN_DIRECTIONS.size() - 1;
-        }
-        return TURN_DIRECTIONS.get(newIndex);
+        int newIndex = (originalIndex + TURN_DIRECTIONS.size()) + indexDelta;
+        return TURN_DIRECTIONS.get(newIndex % TURN_DIRECTIONS.size());
     }
 }

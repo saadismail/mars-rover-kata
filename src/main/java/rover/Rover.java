@@ -40,21 +40,33 @@ public class Rover {
     }
 
     public void process(Command command) {
-        if (command == TURN_RIGHT) {
-            processTurnRight();
-        } if (command == TURN_LEFT) {
-            processTurnLeft();
-        } else {
+        if (isTurn(command)) {
+            processTurn(command);
+        } else if (isMove(command)) {
             processMove(command);
+        } else {
+            throw new AssertionError("Invalid command provided.");
         }
     }
 
-    private void processTurnLeft() {
-        this.direction = Direction.getNewLeftDirection(this.direction);
+    private boolean isMove(Command command) {
+        return command == MOVE_FORWARD || command == MOVE_BACKWARD;
     }
 
-    private void processTurnRight() {
-        this.direction = Direction.getNewRightDirection(this.direction);
+    private boolean isTurn(Command command) {
+        return command == TURN_RIGHT || command == TURN_LEFT;
+    }
+
+    private void processTurn(Command command) {
+        int indexDelta = 0;
+
+        if (command == TURN_RIGHT) {
+            indexDelta = 1;
+        } else if (command == TURN_LEFT) {
+            indexDelta = -1;
+        }
+
+        this.direction = Direction.getNewDirection(this.direction, indexDelta);
     }
 
     private void processMove(Command command) {
