@@ -12,6 +12,8 @@ import java.util.Collection;
 @RunWith(Parameterized.class)
 public class RoverMovementTest {
 
+    public static final Coordinate INITIAL_COORDINATE = new Coordinate(123, 456);
+
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
@@ -37,8 +39,7 @@ public class RoverMovementTest {
 
     @Test
     public void roverTest() {
-        Coordinate initialCoordinate = new Coordinate(123, 456);
-        Rover rover = new Rover(initialCoordinate, direction);
+        Rover rover = new Rover(INITIAL_COORDINATE, direction);
         rover.move(move);
         Assert.assertEquals(expected, rover.getCoordinate());
     }
