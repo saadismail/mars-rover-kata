@@ -17,9 +17,9 @@ public class Rover {
     };
 
     public Rover(Coordinate coordinate, Direction direction) {
+        assert(coordinate != null);
         this.coordinate = coordinate;
         this.direction = direction;
-
     }
 
     public Coordinate getCoordinate() {

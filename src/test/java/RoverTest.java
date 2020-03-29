@@ -3,6 +3,12 @@ import org.junit.Test;
 
 public class RoverTest {
 
+    @Test(expected = AssertionError.class)
+    public void roverInitializationTest_NULL_COORDINATE() {
+        Coordinate initialCoordinate = null;
+        Rover rover = new Rover(initialCoordinate, Direction.NORTH);
+    }
+
     @Test
     public void roverInitializationTest_ORIGIN() {
         Coordinate initialCoordinate = Coordinate.ORIGIN;
