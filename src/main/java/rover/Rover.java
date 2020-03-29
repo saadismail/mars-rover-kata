@@ -43,4 +43,7 @@ public class Rover {
         int newY = this.coordinate.getY() + (delta.getY() * step.coefficient);
         this.coordinate = new Coordinate(newX, newY);
     }
+
+    public void turnRight() {
+    }
 }
