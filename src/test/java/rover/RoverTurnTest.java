@@ -24,22 +24,25 @@ public class RoverTurnTest {
     public Direction initial;
 
     @Parameter(1)
+    public Command command;
+
+    @Parameter(2)
     public Direction expected;
 
-    @Parameters
+    @Parameters(name = "While facing {0}, process {1}, should face {2}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {NORTH, EAST},
-                {EAST, SOUTH},
-                {SOUTH, WEST},
-                {WEST, NORTH}
+                {NORTH, TURN_RIGHT, EAST},
+                {EAST, TURN_RIGHT, SOUTH},
+                {SOUTH, TURN_RIGHT, WEST},
+                {WEST, TURN_RIGHT, NORTH}
         });
     }
 
     @Test
-    public void turnRightTest() {
+    public void turnTest() {
         Rover rover = new Rover(ORIGIN, initial);
-        rover.process(TURN_RIGHT);
+        rover.process(command);
         Assert.assertEquals(expected, rover.getDirection());
     }
 }
