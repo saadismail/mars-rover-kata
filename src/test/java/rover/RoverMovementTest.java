@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.junit.runners.Parameterized.Parameter;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -14,7 +15,14 @@ public class RoverMovementTest {
 
     public static final Coordinate INITIAL_COORDINATE = new Coordinate(123, 456);
 
-    @Parameters
+    @Parameter
+    public Move move;
+    @Parameter(1)
+    public Direction direction;
+    @Parameter(2)
+    public Coordinate expected;
+
+    @Parameters(name = "({0},{1}) == {2}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {Move.FORWARD, Direction.NORTH, new Coordinate(123, 457)},
@@ -27,15 +35,7 @@ public class RoverMovementTest {
                 {Move.BACKWARD, Direction.WEST, new Coordinate(124, 456)}
         });
     }
-    private Move move;
-    private Direction direction;
-    private Coordinate expected;
 
-    public RoverMovementTest(Move move, Direction direction, Coordinate expected) {
-        this.move = move;
-        this.direction = direction;
-        this.expected = expected;
-    }
 
     @Test
     public void roverTest() {
