@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static rover.Coordinate.assertNotNull;
+import static rover.Direction.EAST;
+import static rover.Direction.NORTH;
+import static rover.Direction.SOUTH;
 import static rover.Direction.assertNotNull;
 
 public class Rover {
@@ -45,6 +48,13 @@ public class Rover {
     }
 
     public void turnRight() {
-        direction = Direction.EAST;
+        if (this.direction == EAST) {
+            this.direction = SOUTH;
+        }
+
+        if (this.direction == NORTH) {
+            this.direction = EAST;
+        }
+
     }
 }
