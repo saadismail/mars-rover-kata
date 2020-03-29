@@ -1,5 +1,10 @@
+package rover;
+
 import java.util.HashMap;
 import java.util.Map;
+
+import static rover.Coordinate.assertNotNull;
+import static rover.Direction.assertNotNull;
 
 public class Rover {
 
@@ -17,8 +22,8 @@ public class Rover {
     };
 
     public Rover(Coordinate coordinate, Direction direction) {
-        Coordinate.assertNull(coordinate);
-        Direction.assertNull(direction);
+        assertNotNull(coordinate);
+        assertNotNull(direction);
 
         this.coordinate = coordinate;
         this.direction = direction;

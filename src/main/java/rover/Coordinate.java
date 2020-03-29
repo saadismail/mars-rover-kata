@@ -1,3 +1,5 @@
+package rover;
+
 import exceptions.NullCoordinateException;
 
 public class Coordinate {
@@ -9,7 +11,7 @@ public class Coordinate {
         this.y = y;
     }
 
-    static void assertNull(Coordinate coordinate) {
+    static void assertNotNull(Coordinate coordinate) {
         if (coordinate == null) {
             throw new NullCoordinateException();
         }
@@ -24,7 +26,7 @@ public class Coordinate {
 
     @Override
     public String toString() {
-        return "Coordinate{" +
+        return "rover.Coordinate{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';

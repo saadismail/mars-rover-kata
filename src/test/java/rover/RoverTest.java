@@ -1,3 +1,5 @@
+package rover;
+
 import exceptions.NullCoordinateException;
 import exceptions.NullDirectionException;
 import org.junit.Assert;
