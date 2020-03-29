@@ -1,3 +1,5 @@
+import exceptions.NullCoordinateException;
+
 public class Coordinate {
     private int x, y;
     public final static Coordinate ORIGIN = new Coordinate(0, 0);
@@ -5,6 +7,12 @@ public class Coordinate {
     public Coordinate(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    static void assertNull(Coordinate coordinate) {
+        if (coordinate == null) {
+            throw new NullCoordinateException();
+        }
     }
 
     public int getX() {

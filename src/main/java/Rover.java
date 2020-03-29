@@ -17,13 +17,8 @@ public class Rover {
     };
 
     public Rover(Coordinate coordinate, Direction direction) {
-        if (coordinate == null) {
-            throw new RoverNullCoordinateException();
-        }
-
-        if (direction == null) {
-            throw new RoverNullDirectionException();
-        }
+        Coordinate.assertNull(coordinate);
+        Direction.assertNull(direction);
 
         this.coordinate = coordinate;
         this.direction = direction;

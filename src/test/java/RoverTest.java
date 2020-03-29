@@ -1,14 +1,16 @@
+import exceptions.NullCoordinateException;
+import exceptions.NullDirectionException;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class RoverTest {
 
-    @Test(expected = RoverNullCoordinateException.class)
+    @Test(expected = NullCoordinateException.class)
     public void roverInitializationTest_NULL_COORDINATE() {
         new Rover(null, Direction.NORTH);
     }
 
-    @Test(expected = RoverNullDirectionException.class)
+    @Test(expected = NullDirectionException.class)
     public void roverInitializationTest_NULL_DIRECTION() {
         new Rover(Coordinate.ORIGIN, null);
     }
