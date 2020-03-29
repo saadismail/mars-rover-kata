@@ -60,7 +60,7 @@ public class RoverTest {
     }
 
     @Test
-    public void rover_FORWARD_TO_NORTH() {
+    public void rover_FORWARD_WHEN_FACING_NORTH() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.NORTH);
         rover.forward();
@@ -69,7 +69,7 @@ public class RoverTest {
     }
 
     @Test
-    public void rover_FORWARD_TO_SOUTH() {
+    public void rover_FORWARD_WHEN_FACING_SOUTH() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.SOUTH);
         rover.forward();
@@ -78,7 +78,7 @@ public class RoverTest {
     }
 
     @Test
-    public void rover_FORWARD_TO_WEST() {
+    public void rover_FORWARD_WHEN_FACING_WEST() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.WEST);
         rover.forward();
@@ -87,7 +87,7 @@ public class RoverTest {
     }
 
     @Test
-    public void rover_FORWARD_TO_EAST() {
+    public void rover_FORWARD_WHEN_FACING_EAST() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.EAST);
         rover.forward();
@@ -96,11 +96,20 @@ public class RoverTest {
     }
 
     @Test
-    public void rover_BACKWARD_TO_NORTH() {
+    public void rover_BACKWARD_WHEN_FACING_NORTH() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.NORTH);
         rover.backward();
         Coordinate expected = new Coordinate(123, 455);
+        Assert.assertEquals(expected, rover.getCoordinate());
+    }
+
+    @Test
+    public void rover_BACKWARD_WHEN_FACING_SOUTH() {
+        Coordinate initialCoordinate = new Coordinate(123, 456);
+        Rover rover = new Rover(initialCoordinate, Direction.SOUTH);
+        rover.backward();
+        Coordinate expected = new Coordinate(123, 457);
         Assert.assertEquals(expected, rover.getCoordinate());
     }
 
