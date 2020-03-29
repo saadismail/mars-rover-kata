@@ -3,8 +3,7 @@ package rover;
 import java.util.HashMap;
 import java.util.Map;
 
-import static rover.Command.TURN_LEFT;
-import static rover.Command.TURN_RIGHT;
+import static rover.Command.*;
 import static rover.Coordinate.assertNotNull;
 import static rover.Direction.WEST;
 import static rover.Direction.assertNotNull;
@@ -60,8 +59,22 @@ public class Rover {
 
     private void processMove(Command command) {
         Coordinate delta = directionCoordinateMap.get(this.direction);
-        int newX = this.coordinate.getX() + (delta.getX() * command.coefficient);
-        int newY = this.coordinate.getY() + (delta.getY() * command.coefficient);
+        if (command == MOVE_FORWARD) {
+            moveForward(delta);
+        } else if (command == MOVE_BACKWARD) {
+            moveBackward(delta);
+        }
+    }
+
+    private void moveForward(Coordinate delta) {
+        int newX = this.coordinate.getX() + delta.getX();
+        int newY = this.coordinate.getY() + delta.getY();
+        this.coordinate = new Coordinate(newX, newY);
+    }
+
+    private void moveBackward(Coordinate delta) {
+        int newX = this.coordinate.getX() - delta.getX();
+        int newY = this.coordinate.getY() - delta.getY();
         this.coordinate = new Coordinate(newX, newY);
     }
 }
