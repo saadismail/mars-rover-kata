@@ -95,4 +95,13 @@ public class RoverTest {
         Assert.assertEquals(expected, rover.getCoordinate());
     }
 
+    @Test
+    public void rover_BACKWARD_TO_NORTH() {
+        Coordinate initialCoordinate = new Coordinate(123, 456);
+        Rover rover = new Rover(initialCoordinate, Direction.NORTH);
+        rover.backward();
+        Coordinate expected = new Coordinate(123, 455);
+        Assert.assertEquals(expected, rover.getCoordinate());
+    }
+
 }

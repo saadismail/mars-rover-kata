@@ -43,4 +43,11 @@ public class Rover {
         int newY = this.coordinate.getY() + delta.getY();
         this.coordinate = new Coordinate(newX, newY);
     }
+
+    public void backward() {
+        Coordinate delta = directionCoordinateMap.get(this.direction);
+        int newX = this.coordinate.getX() - delta.getX();
+        int newY = this.coordinate.getY() - delta.getY();
+        this.coordinate = new Coordinate(newX, newY);
+    }
 }
