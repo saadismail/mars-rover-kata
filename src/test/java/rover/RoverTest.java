@@ -59,17 +59,8 @@ public class RoverTest {
         Assert.assertEquals(direction, rover.getDirection());
     }
 
-
     @Test
-    public void roverInitializationTest_FORWARD_FROM_ORIGIN() {
-        Rover rover = new Rover(Coordinate.ORIGIN, Direction.NORTH);
-        rover.forward();
-        Coordinate expected = new Coordinate(0, 1);
-        Assert.assertEquals(expected, rover.getCoordinate());
-    }
-
-    @Test
-    public void roverInitializationTest_FORWARD() {
+    public void rover_FORWARD_TO_NORTH() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.NORTH);
         rover.forward();
@@ -78,7 +69,7 @@ public class RoverTest {
     }
 
     @Test
-    public void roverInitalizationTest_FORWARD_TO_SOUTH() {
+    public void rover_FORWARD_TO_SOUTH() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.SOUTH);
         rover.forward();
@@ -87,7 +78,7 @@ public class RoverTest {
     }
 
     @Test
-    public void roverInitalizationTest_FORWARD_TO_WEST() {
+    public void rover_FORWARD_TO_WEST() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.WEST);
         rover.forward();
@@ -96,7 +87,7 @@ public class RoverTest {
     }
 
     @Test
-    public void roverInitalizationTest_FORWARD_TO_EAST() {
+    public void rover_FORWARD_TO_EAST() {
         Coordinate initialCoordinate = new Coordinate(123, 456);
         Rover rover = new Rover(initialCoordinate, Direction.EAST);
         rover.forward();
