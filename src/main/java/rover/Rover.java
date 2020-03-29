@@ -45,5 +45,6 @@ public class Rover {
     }
 
     public void turnRight() {
+        direction = Direction.EAST;
     }
 }
