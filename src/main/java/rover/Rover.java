@@ -40,12 +40,20 @@ public class Rover {
 
     public void process(Command command) {
         if (command == TURN_RIGHT) {
-            this.direction = Direction.getNewRightDirection(this.direction);
+            processTurnRight();
         } else {
-            Coordinate delta = directionCoordinateMap.get(this.direction);
-            int newX = this.coordinate.getX() + (delta.getX() * command.coefficient);
-            int newY = this.coordinate.getY() + (delta.getY() * command.coefficient);
-            this.coordinate = new Coordinate(newX, newY);
+            processMove(command);
         }
+    }
+
+    private void processTurnRight() {
+        this.direction = Direction.getNewRightDirection(this.direction);
+    }
+
+    private void processMove(Command command) {
+        Coordinate delta = directionCoordinateMap.get(this.direction);
+        int newX = this.coordinate.getX() + (delta.getX() * command.coefficient);
+        int newY = this.coordinate.getY() + (delta.getY() * command.coefficient);
+        this.coordinate = new Coordinate(newX, newY);
     }
 }
