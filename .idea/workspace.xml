@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="306c3974-dd45-4aae-b21b-7fdf3fe8ef33" name="Default" comment="Refactored Rover.Forward and Exception Handling">
+    <list default="true" id="306c3974-dd45-4aae-b21b-7fdf3fe8ef33" name="Default" comment="Introduced delta X and Y in forward method.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rover/Move.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rover/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rover/Rover.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,9 +30,13 @@
     <property name="TF_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/junit/junit/4.13/junit-4.13.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -47,23 +53,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RoverTest (1)">
+  <component name="RunManager" selected="JUnit.RoverTest (2)">
     <configuration name="All in mars-rover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="marsrover" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
@@ -80,12 +74,16 @@
       </method>
     </configuration>
     <configuration name="RoverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="marsrover" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RoverTest" />
+      <module name="mars-rover-kata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rover" />
+      <option name="MAIN_CLASS_NAME" value="rover.RoverTest" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -95,6 +93,22 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RoverTest" />
       <option name="METHOD_NAME" value="roverInitalizationTest_FORWARD_TO_SOUTH" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoverTest.rover_BACKWARD_WHEN_FACING_NORTH" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mars-rover-kata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rover.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rover" />
+      <option name="MAIN_CLASS_NAME" value="rover.RoverTest" />
+      <option name="METHOD_NAME" value="rover_BACKWARD_WHEN_FACING_NORTH" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,14 +138,16 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.MainTest.test" />
-      <item itemvalue="JUnit.RoverTest" />
       <item itemvalue="JUnit.All in mars-rover" />
       <item itemvalue="JUnit.RoverTest.roverInitalizationTest_FORWARD_TO_SOUTH" />
       <item itemvalue="JUnit.RoverTest (1)" />
+      <item itemvalue="JUnit.RoverTest.rover_BACKWARD_WHEN_FACING_NORTH" />
+      <item itemvalue="JUnit.RoverTest (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoverTest (2)" />
+        <item itemvalue="JUnit.RoverTest.rover_BACKWARD_WHEN_FACING_NORTH" />
         <item itemvalue="JUnit.RoverTest (1)" />
         <item itemvalue="JUnit.RoverTest.roverInitalizationTest_FORWARD_TO_SOUTH" />
         <item itemvalue="JUnit.All in mars-rover" />
@@ -219,8 +235,39 @@
       <option name="project" value="LOCAL" />
       <updated>1585408751335</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Introduced delta X and Y in forward method.">
+      <created>1585409215202</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585409215202</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <created>1585486148457</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585486148457</updated>
+      <workItem from="1585486190396" duration="214000" />
+      <workItem from="1585486421584" duration="2268000" />
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Direction.NORTH" />
@@ -234,6 +281,7 @@
     <MESSAGE value="Test for forward to SOUTH" />
     <MESSAGE value="Test for forward to EAST" />
     <MESSAGE value="Refactored Rover.Forward and Exception Handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored Rover.Forward and Exception Handling" />
+    <MESSAGE value="Introduced delta X and Y in forward method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduced delta X and Y in forward method." />
   </component>
 </project>
