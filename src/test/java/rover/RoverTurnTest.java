@@ -38,7 +38,9 @@ public class RoverTurnTest {
                 {SOUTH, TURN_RIGHT, WEST},
                 {WEST, TURN_RIGHT, NORTH},
                 {NORTH, TURN_LEFT, WEST},
-                {EAST, TURN_LEFT, NORTH}
+                {EAST, TURN_LEFT, NORTH},
+                {SOUTH, TURN_LEFT, EAST},
+                {WEST, TURN_LEFT, SOUTH}
         });
     }
 
