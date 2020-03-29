@@ -10,6 +10,7 @@ import org.junit.runners.Parameterized.Parameter;
 import java.util.Arrays;
 import java.util.Collection;
 
+import static rover.Command.TURN_LEFT;
 import static rover.Command.TURN_RIGHT;
 import static rover.Coordinate.ORIGIN;
 import static rover.Direction.EAST;
@@ -35,7 +36,9 @@ public class RoverTurnTest {
                 {NORTH, TURN_RIGHT, EAST},
                 {EAST, TURN_RIGHT, SOUTH},
                 {SOUTH, TURN_RIGHT, WEST},
-                {WEST, TURN_RIGHT, NORTH}
+                {WEST, TURN_RIGHT, NORTH},
+                {NORTH, TURN_LEFT, WEST},
+                {EAST, TURN_LEFT, NORTH}
         });
     }
 

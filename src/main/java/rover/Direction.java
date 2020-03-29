@@ -22,4 +22,13 @@ public enum Direction {
         int newIndex = (originalIndex + 1) % TURN_DIRECTIONS.size();
         return TURN_DIRECTIONS.get(newIndex);
     }
+
+    public static Direction getNewLeftDirection(Direction direction) {
+        int originalIndex = TURN_DIRECTIONS.indexOf(direction);
+        int newIndex = originalIndex - 1;
+        if (newIndex < 0) {
+            newIndex = TURN_DIRECTIONS.size() - 1;
+        }
+        return TURN_DIRECTIONS.get(newIndex);
+    }
 }
