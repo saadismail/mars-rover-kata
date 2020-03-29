@@ -55,6 +55,8 @@ public class Rover {
             this.direction = SOUTH;
         } else if (this.direction == NORTH) {
             this.direction = EAST;
+        } else if (this.direction == WEST) {
+            this.direction = NORTH;
         }
     }
 }

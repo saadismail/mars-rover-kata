@@ -30,7 +30,8 @@ public class RoverTurnTest {
         return Arrays.asList(new Object[][]{
                 {NORTH, EAST},
                 {EAST, SOUTH},
-                {SOUTH, WEST}
+                {SOUTH, WEST},
+                {WEST, NORTH}
         });
     }
 
