@@ -3,6 +3,7 @@ package rover;
 import java.util.HashMap;
 import java.util.Map;
 
+import static rover.Command.TURN_RIGHT;
 import static rover.Coordinate.assertNotNull;
 import static rover.Direction.assertNotNull;
 
@@ -37,14 +38,14 @@ public class Rover {
         return direction;
     }
 
-    public void move(Step step) {
-        Coordinate delta = directionCoordinateMap.get(this.direction);
-        int newX = this.coordinate.getX() + (delta.getX() * step.coefficient);
-        int newY = this.coordinate.getY() + (delta.getY() * step.coefficient);
-        this.coordinate = new Coordinate(newX, newY);
-    }
-
-    public void turnRight() {
-        this.direction = Direction.getNewRightDirection(this.direction);
+    public void process(Command command) {
+        if (command == TURN_RIGHT) {
+            this.direction = Direction.getNewRightDirection(this.direction);
+        } else {
+            Coordinate delta = directionCoordinateMap.get(this.direction);
+            int newX = this.coordinate.getX() + (delta.getX() * command.coefficient);
+            int newY = this.coordinate.getY() + (delta.getY() * command.coefficient);
+            this.coordinate = new Coordinate(newX, newY);
+        }
     }
 }
