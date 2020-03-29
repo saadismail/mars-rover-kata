@@ -113,4 +113,22 @@ public class RoverTest {
         Assert.assertEquals(expected, rover.getCoordinate());
     }
 
+    @Test
+    public void rover_BACKWARD_WHEN_FACING_WEST() {
+        Coordinate initialCoordinate = new Coordinate(123, 456);
+        Rover rover = new Rover(initialCoordinate, Direction.WEST);
+        rover.backward();
+        Coordinate expected = new Coordinate(124, 456);
+        Assert.assertEquals(expected, rover.getCoordinate());
+    }
+
+    @Test
+    public void rover_BACKWARD_WHEN_FACING_EAST() {
+        Coordinate initialCoordinate = new Coordinate(123, 456);
+        Rover rover = new Rover(initialCoordinate, Direction.EAST);
+        rover.backward();
+        Coordinate expected = new Coordinate(122, 456);
+        Assert.assertEquals(expected, rover.getCoordinate());
+    }
+
 }
