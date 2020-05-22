@@ -16,6 +16,7 @@ public class Coordinate {
             throw new NullCoordinateException();
         }
     }
+    // -- test commit
 
     public int getX() {
         return x;
